@@ -51,6 +51,7 @@ def get_transcript():
             },
             "outtmpl": f"%(id)s.%(ext)s",
             "noplaylist": True,
+            "ffmpeg_location": "/usr/bin/ffmpeg",
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
