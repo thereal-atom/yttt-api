@@ -93,5 +93,5 @@ def get_transcript():
                 pass
 
 if __name__ == "__main__":
-    debug = os.getenv("FLASK_ENV") == "development"
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=os.getenv("FLASK_ENV") == "development")
